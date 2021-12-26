@@ -37,5 +37,9 @@ describe("AgeCalculation", () => {
       ageCalculation.calculateLifeExpectancy()
       expect(ageCalculation.earthLifeExpectancy).toEqual(42);
     });
+    test("should correctly calculate life expectancy on mercury", () => {
+      ageCalculation.calculateLifeExpectancy()
+      expect(ageCalculation.mercury.lifeExpectancy).toEqual(67.74);
+    });
   });
 });
