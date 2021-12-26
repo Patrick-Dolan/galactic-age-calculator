@@ -39,7 +39,7 @@ describe("AgeCalculation", () => {
     });
     test("should correctly calculate life expectancy on mercury", () => {
       ageCalculation.calculateLifeExpectancy()
-      expect(ageCalculation.mercury.lifeExpectancy).toEqual(67.74);
+      expect(ageCalculation.mercury.lifeExpectancy).toEqual(175);
     });
   });
 });
