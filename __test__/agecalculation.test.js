@@ -26,5 +26,9 @@ describe("AgeCalculation", () => {
       ageCalculation.calculatePlanetAges();
       expect(ageCalculation.mars.solarAge).toEqual(15.96);
     });
+    test("should correctly calculate solar age on jupiter", () => {
+      ageCalculation.calculatePlanetAges();
+      expect(ageCalculation.jupiter.solarAge).toEqual(2.53);
+    });
   })
 });
