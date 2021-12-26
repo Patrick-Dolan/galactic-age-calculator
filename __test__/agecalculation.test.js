@@ -16,7 +16,7 @@ describe("AgeCalculation", () => {
   describe("calculatePlanetAges", () => {
     test("should correctly calculate solar age on mercury", () => {
       ageCalculation.calculatePlanetAges();
-      expect(ageCalculation.mercury.age).toEqual(125.00);
+      expect(ageCalculation.mercury.solarAge).toEqual(125.00);
     });
   })
 });
