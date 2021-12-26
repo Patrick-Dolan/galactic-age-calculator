@@ -45,5 +45,9 @@ describe("AgeCalculation", () => {
       ageCalculation.calculateLifeExpectancy()
       expect(ageCalculation.venus.lifeExpectancy).toEqual(67.74);
     });
+    test("should correctly calculate life expectancy on mars", () => {
+      ageCalculation.calculateLifeExpectancy()
+      expect(ageCalculation.mars.lifeExpectancy).toEqual(22.34);
+    });
   });
 });
