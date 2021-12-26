@@ -1,6 +1,7 @@
 export class AgeCalculation {
   constructor(age) {
     this.age = age;
+    this.earthLifeExpectancy = 0;
     this.mercury = {
       solarAge: 0
     }
@@ -14,10 +15,13 @@ export class AgeCalculation {
       solarAge: 0
     }
   }
-  calculatePlanetAges(){
+  calculatePlanetAges() {
     this.mercury.solarAge = parseFloat((this.age / 0.24).toFixed(2));
     this.venus.solarAge = parseFloat((this.age / 0.62).toFixed(2));
     this.mars.solarAge = parseFloat((this.age / 1.88).toFixed(2));
     this.jupiter.solarAge = parseFloat((this.age / 11.86).toFixed(2));
+  }
+  calculateLifeExpectancy() {
+    this.earthLifeExpectancy = 72 - this.age;
   }
 }
