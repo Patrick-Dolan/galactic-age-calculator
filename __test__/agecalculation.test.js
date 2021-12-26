@@ -30,5 +30,12 @@ describe("AgeCalculation", () => {
       ageCalculation.calculatePlanetAges();
       expect(ageCalculation.jupiter.solarAge).toEqual(2.53);
     });
-  })
+  });
+  // calculateLifeExpectancy method tests
+  describe("calculateLifeExpectancy", () => {
+    test("should correctly calculate life expectancy on earth", () => {
+      ageCalculation.calculateLifeExpectancy()
+      expect(ageCalculation.earthLifeExpectancy).toEqual(42);
+    });
+  });
 });
