@@ -22,5 +22,9 @@ describe("AgeCalculation", () => {
       ageCalculation.calculatePlanetAges();
       expect(ageCalculation.venus.solarAge).toEqual(48.39);
     });
+    test("should correctly calculate solar age on mars", () => {
+      ageCalculation.calculatePlanetAges();
+      expect(ageCalculation.mars.solarAge).toEqual(15.96);
+    });
   })
 });
