@@ -3,16 +3,20 @@ export class AgeCalculation {
     this.age = age;
     this.earthLifeExpectancy = 0;
     this.mercury = {
-      solarAge: 0
+      solarAge: 0,
+      lifeExpectancy: 0 
     }
     this.venus = {
-      solarAge: 0
+      solarAge: 0,
+      lifeExpectancy: 0
     }
     this.mars = {
-      solarAge: 0
+      solarAge: 0,
+      lifeExpectancy: 0
     }
     this.jupiter = {
-      solarAge: 0
+      solarAge: 0,
+      lifeExpectancy: 0
     }
   }
   calculatePlanetAges() {
@@ -23,6 +27,7 @@ export class AgeCalculation {
   }
   calculateLifeExpectancy() {
     this.earthLifeExpectancy = 72 - this.age;
-    this.mercury.lifeExpectancy = parseFloat(((72 / 0.24) - this.mercury.solarAge).toFixed(2)) ;
+    this.mercury.lifeExpectancy = parseFloat(((72 / 0.24) - this.mercury.solarAge).toFixed(2));
+    this.venus.lifeExpectancy = parseFloat(((72 / 0.62) - this.venus.solarAge).toFixed(2));
   }
 }
