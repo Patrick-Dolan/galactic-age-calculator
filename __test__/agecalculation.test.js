@@ -49,5 +49,9 @@ describe("AgeCalculation", () => {
       ageCalculation.calculateLifeExpectancy()
       expect(ageCalculation.mars.lifeExpectancy).toEqual(22.34);
     });
+    test("should correctly calculate life expectancy on jupiter", () => {
+      ageCalculation.calculateLifeExpectancy()
+      expect(ageCalculation.jupiter.lifeExpectancy).toEqual(3.54);
+    });
   });
 });
