@@ -41,5 +41,9 @@ describe("AgeCalculation", () => {
       ageCalculation.calculateLifeExpectancy()
       expect(ageCalculation.mercury.lifeExpectancy).toEqual(175);
     });
+    test("should correctly calculate life expectancy on venus", () => {
+      ageCalculation.calculateLifeExpectancy()
+      expect(ageCalculation.venus.lifeExpectancy).toEqual(67.74);
+    });
   });
 });
