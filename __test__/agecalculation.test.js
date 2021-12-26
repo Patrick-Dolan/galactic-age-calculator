@@ -18,5 +18,9 @@ describe("AgeCalculation", () => {
       ageCalculation.calculatePlanetAges();
       expect(ageCalculation.mercury.solarAge).toEqual(125.00);
     });
+    test("should correctly calculate solar age on venus", () => {
+      ageCalculation.calculatePlanetAges();
+      expect(ageCalculation.venus.solarAge).toEqual(48.39);
+    });
   })
 });
