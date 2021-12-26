@@ -23,6 +23,6 @@ export class AgeCalculation {
   }
   calculateLifeExpectancy() {
     this.earthLifeExpectancy = 72 - this.age;
-    this.mercury.lifeExpectancy = parseFloat((72 / 0.24).toFixed(2) - this.mercury.solarAge) ;
+    this.mercury.lifeExpectancy = parseFloat(((72 / 0.24) - this.mercury.solarAge).toFixed(2)) ;
   }
 }
