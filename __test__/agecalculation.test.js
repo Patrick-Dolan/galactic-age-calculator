@@ -31,6 +31,13 @@ describe("AgeCalculation", () => {
       expect(ageCalculation.jupiter.solarAge).toEqual(2.53);
     });
   });
+  // averageLifeSpans method tests
+  describe("averageLifeSpans", () => {
+    test("should calculate average life span for mercury", () => {
+      ageCalculation.averageLifeSpans();
+      expect(ageCalculation.mercury.averageLifeSpan).toEqual(300);
+    });
+  });
   // calculateLifeExpectancy method tests
   describe("calculateLifeExpectancy", () => {
     test("should correctly calculate life expectancy on earth", () => {
