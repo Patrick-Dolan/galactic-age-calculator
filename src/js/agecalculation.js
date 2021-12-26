@@ -29,5 +29,6 @@ export class AgeCalculation {
     this.earthLifeExpectancy = 72 - this.age;
     this.mercury.lifeExpectancy = parseFloat(((72 / 0.24) - this.mercury.solarAge).toFixed(2));
     this.venus.lifeExpectancy = parseFloat(((72 / 0.62) - this.venus.solarAge).toFixed(2));
+    this.mars.lifeExpectancy = parseFloat(((72 / 1.88) - this.mars.solarAge).toFixed(2));
   }
 }
