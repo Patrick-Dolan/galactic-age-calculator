@@ -37,8 +37,7 @@ export class AgeCalculation {
     };
   }
   calculatePlanetAges() {
-    let planets = Object.keys(this.planets);
-    planets.forEach((planet) => {
+    Object.keys(this.planets).forEach((planet) => {
       this.planets[planet].solarAge = parseFloat((this.age / this.planets[planet].earthYear).toFixed(2)); 
     });
   }
