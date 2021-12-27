@@ -39,6 +39,7 @@ export class AgeCalculation {
     this.mercury.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.mercury.mercuryEarthYear).toFixed(2));
     this.venus.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.venus.venusEarthYear).toFixed(2));
     this.mars.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.mars.marsEarthYear).toFixed(2));
+    this.jupiter.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.jupiter.jupiterEarthYear).toFixed(2));
   }
   calculateLifeExpectancy() {
     this.earthLifeExpectancy = 72 - this.age;
