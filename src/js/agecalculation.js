@@ -42,15 +42,13 @@ export class AgeCalculation {
     });
   }
   averageLifeSpans() {
-    let planets = Object.keys(this.planets);
-    planets.forEach((planet) => {
+    Object.keys(this.planets).forEach((planet) => {
       this.planets[planet].averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.planets[planet].earthYear).toFixed(2)); 
     });
   }
   calculateLifeExpectancy() {
     this.earthLifeExpectancy = this.earthAverageLifeSpan - this.age;
-    let planets = Object.keys(this.planets);
-    planets.forEach((planet) => {
+    Object.keys(this.planets).forEach((planet) => {
       this.planets[planet].lifeExpectancy = parseFloat((this.planets[planet].averageLifeSpan - this.planets[planet].solarAge).toFixed(2)); 
     });
   }
@@ -59,8 +57,7 @@ export class AgeCalculation {
   }
   calculateSurpassedLifeExpectancy() {
     this.surpassedLifeExpectancy = Math.abs(this.earthLifeExpectancy);
-    let planets = Object.keys(this.planets);
-    planets.forEach((planet) => {
+    Object.keys(this.planets).forEach((planet) => {
       this.planets[planet].surpassedLifeExpectancy = Math.abs(this.planets[planet].lifeExpectancy);
     });
   }
