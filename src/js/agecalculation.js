@@ -1,5 +1,4 @@
 export class AgeCalculation {
-  //TODO add earth average life span and use it to calc other planets then refactor methods
   constructor(age) {
     this.age = age;
     this.earthAverageLifeSpan = 72;
@@ -30,10 +29,10 @@ export class AgeCalculation {
     }
   }
   calculatePlanetAges() {
-    this.mercury.solarAge = parseFloat((this.age / 0.24).toFixed(2));
-    this.venus.solarAge = parseFloat((this.age / 0.62).toFixed(2));
-    this.mars.solarAge = parseFloat((this.age / 1.88).toFixed(2));
-    this.jupiter.solarAge = parseFloat((this.age / 11.86).toFixed(2));
+    this.mercury.solarAge = parseFloat((this.age / this.mercury.mercuryEarthYear).toFixed(2));
+    this.venus.solarAge = parseFloat((this.age / this.venus.venusEarthYear).toFixed(2));
+    this.mars.solarAge = parseFloat((this.age / this.mars.marsEarthYear).toFixed(2));
+    this.jupiter.solarAge = parseFloat((this.age / this.jupiter.jupiterEarthYear).toFixed(2));
   }
   averageLifeSpans() {
     this.mercury.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.mercury.mercuryEarthYear).toFixed(2));
