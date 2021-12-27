@@ -34,7 +34,7 @@ export class AgeCalculation {
         surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       }
-    }
+    };
   }
   calculatePlanetAges() {
     let planets = Object.keys(this.planets);
