@@ -44,9 +44,9 @@ export class AgeCalculation {
   }
   calculateLifeExpectancy() {
     this.earthLifeExpectancy = this.earthAverageLifeSpan - this.age;
-    this.mercury.lifeExpectancy = parseFloat((this.mercury.averageLifeSpan - this.mercury.solarAge).toFixed(2));
-    this.venus.lifeExpectancy = parseFloat((this.venus.averageLifeSpan - this.venus.solarAge).toFixed(2));
-    this.mars.lifeExpectancy = parseFloat((this.mars.averageLifeSpan - this.mars.solarAge).toFixed(2));
-    this.jupiter.lifeExpectancy = parseFloat((this.jupiter.averageLifeSpan - this.jupiter.solarAge).toFixed(2));
+    let planets = Object.keys(this.planets);
+    planets.forEach((planet) => {
+      this.planets[planet].lifeExpectancy = parseFloat((this.planets[planet].averageLifeSpan - this.planets[planet].solarAge).toFixed(2)); 
+    });
   }
 }
