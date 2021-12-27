@@ -4,9 +4,9 @@
 
 #### _A web app that takes in a users age and calculates what it would be on other planets solar years._
 
-<!-- ## Github Pages Link
+## Github Pages Link
 
-[TITLE HERE Github Pages](https://patrick-dolan.github.io/APPLICATIONNAMEHERE/) -->
+[Galactic Age Calculator Github Pages](https://patrick-dolan.github.io/galactic-age-calculator/)
 
 ## Technologies Used
 
