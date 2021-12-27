@@ -3,30 +3,35 @@ export class AgeCalculation {
     this.age = age;
     this.earthAverageLifeSpan = 72;
     this.earthLifeExpectancy = 0;
+    this.surpassedLifeExpectancy = 0;
     this.isPastLifeExpectancy = undefined;
     this.planets = {
       mercury: {
         earthYear: 0.24,
         solarAge: 0,
         lifeExpectancy: 0,
+        surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       },
       venus: {
         earthYear: 0.62,
         solarAge: 0,
         lifeExpectancy: 0,
+        surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       },
       mars: {
         earthYear: 1.88,
         solarAge: 0,
         lifeExpectancy: 0,
+        surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       },
       jupiter: {
         earthYear: 11.86,
         solarAge: 0,
         lifeExpectancy: 0,
+        surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       }
     }
@@ -52,5 +57,12 @@ export class AgeCalculation {
   }
   hasSurpassedLifeExpectancy() {
     (this.age > this.earthAverageLifeSpan) ? this.isPastLifeExpectancy = true : this.isPastLifeExpectancy = false; 
+  }
+  calculateSurpassedLifeExpectancy() {
+    this.surpassedLifeExpectancy = Math.abs(this.earthLifeExpectancy);
+    let planets = Object.keys(this.planets);
+    planets.forEach((planet) => {
+      this.planets[planet].surpassedLifeExpectancy = Math.abs(this.planets[planet].lifeExpectancy);
+    });
   }
 }
