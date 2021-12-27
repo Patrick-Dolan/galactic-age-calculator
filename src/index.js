@@ -8,7 +8,11 @@ function displayPlanetDetails(ageCalc) {
   let planetList = $("ul#planets");
   let htmlForPlanetList = "";
   Object.keys(ageCalc.planets).forEach((planet) => {
-    htmlForPlanetList += `<li>Your age on ${planet} would be ${ageCalc.planets[planet].solarAge} where the average life expectancy is ${ageCalc.planets[planet].lifeExpectancy}.`;
+    if (ageCalc.isPastLifeExpectancy) {
+      htmlForPlanetList += `<li>Your age on ${planet} would be ${ageCalc.planets[planet].solarAge} where the average life expectancy is ${ageCalc.planets[planet].averageLifeSpan}. That means that you've lived ${ageCalc.planets[planet].surpassedLifeExpectancy} more years than ${planet}'s average life expectancy.</li>`;
+    } else {
+      htmlForPlanetList += `<li>Your age on ${planet} would be ${ageCalc.planets[planet].solarAge} where the average life expectancy is ${ageCalc.planets[planet].averageLifeSpan}. That means that you shoud live at least ${ageCalc.planets[planet].lifeExpectancy} more years in ${planet} solar years.</li>`;
+    }
   });
   planetList.html(htmlForPlanetList);
 }
@@ -21,6 +25,7 @@ $("form#ageCalcForm").submit((event) => {
   ageCalc.averageLifeSpans();
   ageCalc.calculateLifeExpectancy();
   ageCalc.hasSurpassedLifeExpectancy();
+  ageCalc.calculateSurpassedLifeExpectancy();
   displayPlanetDetails(ageCalc);
   console.log(ageCalc);
 });
