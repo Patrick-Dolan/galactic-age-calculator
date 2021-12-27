@@ -79,5 +79,10 @@ describe("AgeCalculation", () => {
       ageCalculation.hasSurpassedLifeExpectancy();
       expect(ageCalculation.surpassedLifeExpectancy).toBeFalsy();
     });
+    test("should correctly return true when users age is over lifeExpectancy", () => {
+      ageCalculation.age = 95;
+      ageCalculation.hasSurpassedLifeExpectancy();
+      expect(ageCalculation.surpassedLifeExpectancy).toBeTruthy();
+    });
   });
 });
