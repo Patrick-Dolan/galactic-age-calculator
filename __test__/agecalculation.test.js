@@ -77,12 +77,22 @@ describe("AgeCalculation", () => {
   describe("hasSurpassedLifeExpectancy", () => {
     test("should correctly return false when users age is under lifeExpectancy", () => {
       ageCalculation.hasSurpassedLifeExpectancy();
-      expect(ageCalculation.surpassedLifeExpectancy).toBeFalsy();
+      expect(ageCalculation.isPastLifeExpectancy).toBeFalsy();
     });
     test("should correctly return true when users age is over lifeExpectancy", () => {
       ageCalculation.age = 95;
       ageCalculation.hasSurpassedLifeExpectancy();
-      expect(ageCalculation.surpassedLifeExpectancy).toBeTruthy();
+      expect(ageCalculation.isPastLifeExpectancy).toBeTruthy();
+    });
+  });
+  // calculateSurpassedLifeExpectancy method tests
+  describe("calculateSurpassedLifeExpectancy", () => {
+    beforeEach(() => {
+      ageCalculation.age = 95;
+    });
+    test("should correctly calculate mercury surpassed life expectancy as a positive number" , () => {
+      ageCalculation.calcualteSurpassedLifeExpectancy();
+      expect(ageCalculation.planets["mercury"].surpassedLifeExpectancy).toEqual(95.83);
     });
   });
 });
