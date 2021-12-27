@@ -10,6 +10,7 @@ export class AgeCalculation {
         earthYear: 0.24,
         solarAge: 0,
         lifeExpectancy: 0,
+        lifeLeft: 0,
         surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       },
@@ -17,6 +18,7 @@ export class AgeCalculation {
         earthYear: 0.62,
         solarAge: 0,
         lifeExpectancy: 0,
+        lifeLeft: 0,
         surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       },
@@ -24,6 +26,7 @@ export class AgeCalculation {
         earthYear: 1.88,
         solarAge: 0,
         lifeExpectancy: 0,
+        lifeLeft: 0,
         surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       },
@@ -31,6 +34,7 @@ export class AgeCalculation {
         earthYear: 11.86,
         solarAge: 0,
         lifeExpectancy: 0,
+        lifeLeft: 0,
         surpassedLifeExpectancy: 0,
         averageLifeSpan: 0
       }
@@ -53,6 +57,9 @@ export class AgeCalculation {
     let planets = Object.keys(this.planets);
     planets.forEach((planet) => {
       this.planets[planet].lifeExpectancy = parseFloat((this.planets[planet].averageLifeSpan - this.planets[planet].solarAge).toFixed(2)); 
+      if (this.planets[planet].lifeExpectancy > this.planets[planet].solarAge) {
+        this.planets[planet].lifeLeft = this.planets[planet].lifeExpectancy - this.planets[planet].solarAge;
+      }
     });
   }
   hasSurpassedLifeExpectancy() {
