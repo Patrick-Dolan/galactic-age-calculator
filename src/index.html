@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width-device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Galactic Age Calculator</title>
 </head>
 <body>
@@ -15,11 +15,21 @@
     </div>
     <!-- Form -->
     <div class="row">
+      <form id="ageCalcForm">
+        <div class="col-md-12">
+          <label for="userAge" class="form-label">Age:</label>
+          <input type="number" class="form-control" id="userAge">
+        </div>
+        <div class="col-md-12 d-grid">
+          <button type="button" class="btn btn-block btn-primary">Calculate!</button>
+        </div>
+      </form>
     </div>
     <!-- Age Display -->
     <div class="row">
-      <div class="col-md-12">
-        
+      <div class="col-md-12" id="ageDisplay">
+        <ul class="planets">
+        </ul>
       </div>
     </div>
   </div>
