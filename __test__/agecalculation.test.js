@@ -2,7 +2,7 @@ import { AgeCalculation } from "./../src/js/agecalculation";
 
 let age;
 let ageCalculation;
-beforeAll(() => {
+beforeEach(() => {
   age = 30;
   ageCalculation = new AgeCalculation(age);
 });
@@ -52,6 +52,11 @@ describe("AgeCalculation", () => {
   });
   // calculateLifeExpectancy method tests
   describe("calculateLifeExpectancy", () => {
+    beforeEach(() => {
+      ageCalculation.calculatePlanetAges();
+      ageCalculation.averageLifeSpans();
+      
+    });
     test("should correctly calculate life expectancy on earth", () => {
       ageCalculation.calculateLifeExpectancy()
       expect(ageCalculation.earthLifeExpectancy).toEqual(42);
@@ -87,11 +92,10 @@ describe("AgeCalculation", () => {
   });
   // calculateSurpassedLifeExpectancy method tests
   describe("calculateSurpassedLifeExpectancy", () => {
-    beforeEach(() => {
-      ageCalculation.age = 95;
-    });
     test("should correctly calculate mercury surpassed life expectancy as a positive number" , () => {
-      ageCalculation.calcualteSurpassedLifeExpectancy();
+      ageCalculation.age = 95;
+      ageCalculation.calculateLifeExpectancy();
+      ageCalculation.calculateSurpassedLifeExpectancy();
       expect(ageCalculation.planets["mercury"].surpassedLifeExpectancy).toEqual(95.83);
     });
   });
