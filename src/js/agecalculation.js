@@ -3,6 +3,7 @@ export class AgeCalculation {
     this.age = age;
     this.earthAverageLifeSpan = 72;
     this.earthLifeExpectancy = 0;
+    this.surpassedLifeExpectancy = undefined;
     this.planets = {
       mercury: {
         earthYear: 0.24,
@@ -48,5 +49,8 @@ export class AgeCalculation {
     planets.forEach((planet) => {
       this.planets[planet].lifeExpectancy = parseFloat((this.planets[planet].averageLifeSpan - this.planets[planet].solarAge).toFixed(2)); 
     });
+  }
+  hasSurpassedLifeExpectancy() {
+    (this.age > this.earthAverageLifeSpan) ? this.surpassedLifeExpectancy = true : this.surpassedLifeExpectancy = false; 
   }
 }
