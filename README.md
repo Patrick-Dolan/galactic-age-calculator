@@ -1,45 +1,44 @@
-# _{Application name here}_
+# _Galactic Age Calculator_
 
-#### By _**{List of contributors}**_
+#### By _**Patrick Dolan**_
 
-#### _{Brief description of application}_
+#### _A web app that takes in a users age and calculates what it would be on other planets solar years._
 
-## Github Pages Link
+<!-- ## Github Pages Link
 
-[TITLE HERE Github Pages](https://patrick-dolan.github.io/APPLICATIONNAMEHERE/)
+[TITLE HERE Github Pages](https://patrick-dolan.github.io/APPLICATIONNAMEHERE/) -->
 
 ## Technologies Used
 
 * _HTML_
 * _CSS & Bootstrap_
 * _Javascript & jQuery_
+* _NPM_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+Enter your age and this application will let you know what your age is based on the solar years of four different planets: Mercury, Venus, Mars, & Jupiter.
+
+The app will let you know how long you would be expected to live on the other planets based on the global average estimated by the United Nations at 72 years. If you have surpassed the estimate it will tell you how long you've lived past it. 
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* _Download or Clone the repo down to your computer._
+* _Navigate into the "galactic-age-calculator" directory you just downloaded and open it with your terminal and code editor of choice of choice._
+* _type "npm install" in your terminal to install dependencies._
+* _type "npm run start" to launch the program._
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known issues_
 
 ## Contact Me
 
-_Let me know if you run into any issues or have questions, ideas or concerns:_
-_[Author Email Here]_
+_Let me know if you run into any issues or have questions, ideas or concerns:_  
+_dolanp1992@gmail.com_
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_MIT_
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) _2021_ _Patrick Dolan_
