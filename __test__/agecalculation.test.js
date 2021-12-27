@@ -70,6 +70,9 @@ describe("AgeCalculation", () => {
     test("should correctly calculate life expectancy on jupiter", () => {
       expect(ageCalculation.planets["jupiter"].lifeExpectancy).toEqual(3.54);
     });
+    test("should correctly calculate number of years left on mercury", () => {
+      expect(ageCalculation.planets["mercury"].lifeLeft).toEqual(50.00);
+    });
   });
   // hasSurpassedLifeExpectancy method tests
   describe("hasSurpassedLifeExpectancy", () => {
