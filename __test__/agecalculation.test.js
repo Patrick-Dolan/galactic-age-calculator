@@ -39,7 +39,7 @@ describe("AgeCalculation", () => {
     });
     test("should calculate average life span for venus", () => {
       ageCalculation.averageLifeSpans();
-      expect(ageCalculation.venus.averageLifeSpan).toEqual(116.12);
+      expect(ageCalculation.venus.averageLifeSpan).toEqual(116.13);
     });
   });
   // calculateLifeExpectancy method tests
