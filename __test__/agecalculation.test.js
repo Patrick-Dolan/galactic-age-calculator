@@ -35,19 +35,19 @@ describe("AgeCalculation", () => {
   describe("averageLifeSpans", () => {
     test("should calculate average life span for mercury", () => {
       ageCalculation.averageLifeSpans();
-      expect(ageCalculation.mercury.averageLifeSpan).toEqual(300);
+      expect(ageCalculation.planets["mercury"].averageLifeSpan).toEqual(300);
     });
     test("should calculate average life span for venus", () => {
       ageCalculation.averageLifeSpans();
-      expect(ageCalculation.venus.averageLifeSpan).toEqual(116.13);
+      expect(ageCalculation.planets["venus"].averageLifeSpan).toEqual(116.13);
     });
     test("should calculate average life span for mars", () => {
       ageCalculation.averageLifeSpans();
-      expect(ageCalculation.mars.averageLifeSpan).toEqual(38.30);
+      expect(ageCalculation.planets["mars"].averageLifeSpan).toEqual(38.30);
     });
     test("should calculate average life span for jupiter", () => {
       ageCalculation.averageLifeSpans();
-      expect(ageCalculation.jupiter.averageLifeSpan).toEqual(6.07);
+      expect(ageCalculation.planets["jupiter"].averageLifeSpan).toEqual(6.07);
     });
   });
   // calculateLifeExpectancy method tests

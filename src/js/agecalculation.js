@@ -35,16 +35,12 @@ export class AgeCalculation {
     planets.forEach((planet) => {
       this.planets[planet].solarAge = parseFloat((this.age / this.planets[planet].earthYear).toFixed(2)); 
     });
-    // this.mercury.solarAge = parseFloat((this.age / this.mercury.mercuryEarthYear).toFixed(2));
-    // this.venus.solarAge = parseFloat((this.age / this.venus.venusEarthYear).toFixed(2));
-    // this.mars.solarAge = parseFloat((this.age / this.mars.marsEarthYear).toFixed(2));
-    // this.jupiter.solarAge = parseFloat((this.age / this.jupiter.jupiterEarthYear).toFixed(2));
   }
   averageLifeSpans() {
-    this.mercury.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.mercury.mercuryEarthYear).toFixed(2));
-    this.venus.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.venus.venusEarthYear).toFixed(2));
-    this.mars.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.mars.marsEarthYear).toFixed(2));
-    this.jupiter.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.jupiter.jupiterEarthYear).toFixed(2));
+    let planets = Object.keys(this.planets);
+    planets.forEach((planet) => {
+      this.planets[planet].averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.planets[planet].earthYear).toFixed(2)); 
+    });
   }
   calculateLifeExpectancy() {
     this.earthLifeExpectancy = this.earthAverageLifeSpan - this.age;
