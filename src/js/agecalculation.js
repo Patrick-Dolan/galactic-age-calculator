@@ -58,7 +58,7 @@ export class AgeCalculation {
     planets.forEach((planet) => {
       this.planets[planet].lifeExpectancy = parseFloat((this.planets[planet].averageLifeSpan - this.planets[planet].solarAge).toFixed(2)); 
       if (this.planets[planet].lifeExpectancy > this.planets[planet].solarAge) {
-        this.planets[planet].lifeLeft = this.planets[planet].lifeExpectancy - this.planets[planet].solarAge;
+        this.planets[planet].lifeLeft = parseFloat((this.planets[planet].lifeExpectancy - this.planets[planet].solarAge).toFixed(2));
       }
     });
   }
