@@ -16,19 +16,19 @@ describe("AgeCalculation", () => {
   describe("calculatePlanetAges", () => {
     test("should correctly calculate solar age on mercury", () => {
       ageCalculation.calculatePlanetAges();
-      expect(ageCalculation.mercury.solarAge).toEqual(125.00);
+      expect(ageCalculation.planets["mercury"].solarAge).toEqual(125.00);
     });
     test("should correctly calculate solar age on venus", () => {
       ageCalculation.calculatePlanetAges();
-      expect(ageCalculation.venus.solarAge).toEqual(48.39);
+      expect(ageCalculation.planets["venus"].solarAge).toEqual(48.39);
     });
     test("should correctly calculate solar age on mars", () => {
       ageCalculation.calculatePlanetAges();
-      expect(ageCalculation.mars.solarAge).toEqual(15.96);
+      expect(ageCalculation.planets["mars"].solarAge).toEqual(15.96);
     });
     test("should correctly calculate solar age on jupiter", () => {
       ageCalculation.calculatePlanetAges();
-      expect(ageCalculation.jupiter.solarAge).toEqual(2.53);
+      expect(ageCalculation.planets["jupiter"].solarAge).toEqual(2.53);
     });
   });
   // averageLifeSpans method tests

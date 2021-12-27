@@ -3,36 +3,42 @@ export class AgeCalculation {
     this.age = age;
     this.earthAverageLifeSpan = 72;
     this.earthLifeExpectancy = 0;
-    this.mercury = {
-      mercuryEarthYear: 0.24,
-      solarAge: 0,
-      lifeExpectancy: 0,
-      averageLifeSpan: 0
-    }
-    this.venus = {
-      venusEarthYear: 0.62,
-      solarAge: 0,
-      lifeExpectancy: 0,
-      averageLifeSpan: 0
-    }
-    this.mars = {
-      marsEarthYear: 1.88,
-      solarAge: 0,
-      lifeExpectancy: 0,
-      averageLifeSpan: 0
-    }
-    this.jupiter = {
-      jupiterEarthYear: 11.86,
-      solarAge: 0,
-      lifeExpectancy: 0,
-      averageLifeSpan: 0
+    this.planets = {
+      mercury: {
+        earthYear: 0.24,
+        solarAge: 0,
+        lifeExpectancy: 0,
+        averageLifeSpan: 0
+      },
+      venus: {
+        earthYear: 0.62,
+        solarAge: 0,
+        lifeExpectancy: 0,
+        averageLifeSpan: 0
+      },
+      mars: {
+        earthYear: 1.88,
+        solarAge: 0,
+        lifeExpectancy: 0,
+        averageLifeSpan: 0
+      },
+      jupiter: {
+        earthYear: 11.86,
+        solarAge: 0,
+        lifeExpectancy: 0,
+        averageLifeSpan: 0
+      }
     }
   }
   calculatePlanetAges() {
-    this.mercury.solarAge = parseFloat((this.age / this.mercury.mercuryEarthYear).toFixed(2));
-    this.venus.solarAge = parseFloat((this.age / this.venus.venusEarthYear).toFixed(2));
-    this.mars.solarAge = parseFloat((this.age / this.mars.marsEarthYear).toFixed(2));
-    this.jupiter.solarAge = parseFloat((this.age / this.jupiter.jupiterEarthYear).toFixed(2));
+    let planets = Object.keys(this.planets);
+    planets.forEach((planet) => {
+      this.planets[planet].solarAge = parseFloat((this.age / this.planets[planet].earthYear).toFixed(2)); 
+    });
+    // this.mercury.solarAge = parseFloat((this.age / this.mercury.mercuryEarthYear).toFixed(2));
+    // this.venus.solarAge = parseFloat((this.age / this.venus.venusEarthYear).toFixed(2));
+    // this.mars.solarAge = parseFloat((this.age / this.mars.marsEarthYear).toFixed(2));
+    // this.jupiter.solarAge = parseFloat((this.age / this.jupiter.jupiterEarthYear).toFixed(2));
   }
   averageLifeSpans() {
     this.mercury.averageLifeSpan = parseFloat((this.earthAverageLifeSpan / this.mercury.mercuryEarthYear).toFixed(2));
