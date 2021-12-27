@@ -55,7 +55,6 @@ describe("AgeCalculation", () => {
     beforeEach(() => {
       ageCalculation.calculatePlanetAges();
       ageCalculation.averageLifeSpans();
-      
     });
     test("should correctly calculate life expectancy on earth", () => {
       ageCalculation.calculateLifeExpectancy()
@@ -92,10 +91,17 @@ describe("AgeCalculation", () => {
   });
   // calculateSurpassedLifeExpectancy method tests
   describe("calculateSurpassedLifeExpectancy", () => {
-    test("should correctly calculate mercury surpassed life expectancy as a positive number" , () => {
+    beforeEach(() => {
       ageCalculation.age = 95;
+      ageCalculation.calculatePlanetAges();
+      ageCalculation.averageLifeSpans();
       ageCalculation.calculateLifeExpectancy();
       ageCalculation.calculateSurpassedLifeExpectancy();
+    });
+    test("should correctly calculate earth surpassed life expectancy as a positive number" , () => {
+      expect(ageCalculation.surpassedLifeExpectancy).toEqual(23);
+    });
+    test("should correctly calculate mercury surpassed life expectancy as a positive number" , () => {
       expect(ageCalculation.planets["mercury"].surpassedLifeExpectancy).toEqual(95.83);
     });
   });
