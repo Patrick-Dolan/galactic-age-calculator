@@ -70,8 +70,18 @@ describe("AgeCalculation", () => {
     test("should correctly calculate life expectancy on jupiter", () => {
       expect(ageCalculation.planets["jupiter"].lifeExpectancy).toEqual(3.54);
     });
+    // lifeLeft
     test("should correctly calculate number of years left on mercury", () => {
       expect(ageCalculation.planets["mercury"].lifeLeft).toEqual(50.00);
+    });
+    test("should correctly calculate number of years left on venus", () => {
+      expect(ageCalculation.planets["venus"].lifeLeft).toEqual(19.35);
+    });
+    test("should correctly calculate number of years left on mars", () => {
+      expect(ageCalculation.planets["mars"].lifeLeft).toEqual(6.38);
+    });
+    test("should correctly calculate number of years left on jupiter", () => {
+      expect(ageCalculation.planets["jupiter"].lifeLeft).toEqual(1.01);
     });
   });
   // hasSurpassedLifeExpectancy method tests
