@@ -104,5 +104,14 @@ describe("AgeCalculation", () => {
     test("should correctly calculate mercury surpassed life expectancy as a positive number" , () => {
       expect(ageCalculation.planets["mercury"].surpassedLifeExpectancy).toEqual(95.83);
     });
+    test("should correctly calculate venus surpassed life expectancy as a positive number" , () => {
+      expect(ageCalculation.planets["venus"].surpassedLifeExpectancy).toEqual(37.10);
+    });
+    test("should correctly calculate mars surpassed life expectancy as a positive number" , () => {
+      expect(ageCalculation.planets["mars"].surpassedLifeExpectancy).toEqual(12.23);
+    });
+    test("should correctly calculate jupiter surpassed life expectancy as a positive number" , () => {
+      expect(ageCalculation.planets["jupiter"].surpassedLifeExpectancy).toEqual(1.94);
+    });
   });
 });
