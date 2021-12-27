@@ -56,9 +56,10 @@ export class AgeCalculation {
     });
   }
   hasSurpassedLifeExpectancy() {
-    (this.age > this.earthAverageLifeSpan) ? this.isPastLifeExpectancy = true : this.isPastLifeExpectancy = false; 
+    (this.age > this.earthAverageLifeSpan) ?  this.calculateSurpassedLifeExpectancy() : this.isPastLifeExpectancy = false; 
   }
   calculateSurpassedLifeExpectancy() {
+    this.isPastLifeExpectancy = true;
     this.surpassedLifeExpectancy = Math.abs(this.earthLifeExpectancy);
     let planets = Object.keys(this.planets);
     planets.forEach((planet) => {
