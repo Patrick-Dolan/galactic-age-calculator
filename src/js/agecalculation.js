@@ -11,16 +11,22 @@ export class AgeCalculation {
       averageLifeSpan: 0
     }
     this.venus = {
+      venusEarthYear: 0.62,
       solarAge: 0,
-      lifeExpectancy: 0
+      lifeExpectancy: 0,
+      averageLifeSpan: 0
     }
     this.mars = {
+      marsEarthYear: 1.88,
       solarAge: 0,
-      lifeExpectancy: 0
+      lifeExpectancy: 0,
+      averageLifeSpan: 0
     }
     this.jupiter = {
+      jupiterEarthYear: 11.86,
       solarAge: 0,
-      lifeExpectancy: 0
+      lifeExpectancy: 0,
+      averageLifeSpan: 0
     }
   }
   calculatePlanetAges() {
