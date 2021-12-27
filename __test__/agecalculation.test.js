@@ -37,6 +37,10 @@ describe("AgeCalculation", () => {
       ageCalculation.averageLifeSpans();
       expect(ageCalculation.mercury.averageLifeSpan).toEqual(300);
     });
+    test("should calculate average life span for venus", () => {
+      ageCalculation.averageLifeSpans();
+      expect(ageCalculation.venus.averageLifeSpan).toEqual(116.12);
+    });
   });
   // calculateLifeExpectancy method tests
   describe("calculateLifeExpectancy", () => {
