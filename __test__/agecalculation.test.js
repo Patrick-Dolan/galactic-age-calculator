@@ -45,6 +45,10 @@ describe("AgeCalculation", () => {
       ageCalculation.averageLifeSpans();
       expect(ageCalculation.mars.averageLifeSpan).toEqual(38.30);
     });
+    test("should calculate average life span for jupiter", () => {
+      ageCalculation.averageLifeSpans();
+      expect(ageCalculation.jupiter.averageLifeSpan).toEqual(6.07);
+    });
   });
   // calculateLifeExpectancy method tests
   describe("calculateLifeExpectancy", () => {
