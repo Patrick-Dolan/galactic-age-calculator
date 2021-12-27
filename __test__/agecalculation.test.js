@@ -73,4 +73,11 @@ describe("AgeCalculation", () => {
       expect(ageCalculation.planets["jupiter"].lifeExpectancy).toEqual(3.54);
     });
   });
+  // hasSurpassedLifeExpectancy method tests
+  describe("hasSurpassedLifeExpectancy", () => {
+    test("should correctly return false when users age is under lifeExpectancy", () => {
+      ageCalculation.hasSurpassedLifeExpectancy();
+      expect(ageCalculation.surpassedLifeExpectancy).toBeFalsy();
+    });
+  });
 });
