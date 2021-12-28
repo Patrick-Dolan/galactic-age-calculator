@@ -8,5 +8,7 @@
   margin-top: 1em;
 }
 .card-img-top {
-  max-height: 20em;
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
 }
