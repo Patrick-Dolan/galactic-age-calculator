@@ -37,4 +37,6 @@ $("form#ageCalcForm").submit((event) => {
   ageCalc.hasSurpassedLifeExpectancy();
   ageCalc.calculateSurpassedLifeExpectancy();
   displayPlanetDetails(ageCalc);
+  $("#ageDisplayPlaceholder").hide();
+  $("#ageDisplay").slideDown();
 });
