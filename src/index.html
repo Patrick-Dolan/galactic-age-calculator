@@ -21,12 +21,15 @@
           <h2>Whats a Galactic Age Calculator?</h2>
           <p>Put simply, it calculates what your age would be based on a solar year on different planets. We consider a year to be one rotation around the sun so our solar year is 365 days; however Mercury for example takes only 88 days to rotate around the sun making its solar year 88 days long.</p>
           <p><strong>Type in your age below and hit calculate to see what your age would be on other planets!</strong></p>
+          <!-- Form -->
           <form id="ageCalcForm">
-            <div>
-              <label for="userAge" class="form-label">Age:</label>
-              <input type="number" class="form-control" id="userAge">
+            <div class="form-group row">
+              <label for="userAge" class="col-sm-2 col-form-label">Age:</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="userAge" min="1">
+              </div>
             </div>
-            <div class="d-grid">
+            <div class="d-grid age-calc-button">
               <button type="submit" class="btn btn-block btn-primary">Calculate!</button>
             </div>
           </form>
@@ -34,9 +37,6 @@
         <div class="col-md-9">
           <h2></h2>
         </div>
-      </div>
-      <!-- Form -->
-      <div class="row">
       </div>
     </div>
     <!-- Age Display -->
