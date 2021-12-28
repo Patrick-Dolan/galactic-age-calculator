@@ -39,4 +39,5 @@ $("form#ageCalcForm").submit((event) => {
   displayPlanetDetails(ageCalc);
   $("#ageDisplayPlaceholder").hide();
   $("#ageDisplay").slideDown();
+  $("input#userAge").val("");
 });
