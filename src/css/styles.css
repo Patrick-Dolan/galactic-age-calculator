@@ -7,3 +7,6 @@
 .age-calc-button {
   margin-top: 1em;
 }
+.card-img-top {
+  max-height: 20em;
+}
