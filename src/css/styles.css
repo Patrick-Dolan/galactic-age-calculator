@@ -12,3 +12,9 @@
   height: 20vw;
   object-fit: cover;
 }
+#ageDisplay {
+  display: none;
+}
+#ageDisplayPlaceholder, h3 {
+  text-align: center;
+}
